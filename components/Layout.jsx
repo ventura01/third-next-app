@@ -2,19 +2,22 @@ import Navbar from "./Navbar";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+import styles from "../styles/Layout.module.css";
 
-const Layout = ({ children, title, description }) => {
+const Layout = ({ children, title, description, home }) => {
   return (
     <div>
       <Navbar />
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <div className={styles.container}>
+        <Head>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </div>
   );
 };
