@@ -3,3 +3,4 @@
 3- Botones dinamicos (activo, deshabilitado)
 4- Estilos css
 5- Formulario
+6- Derechos reservados (mes/año)
