@@ -4,3 +4,5 @@
 4- Estilos css
 5- Formulario
 6- Derechos reservados (mes/año)
+7- Schema con valores en "Numeros y Decimales"
+8- Tipo de letra global del proyecto
