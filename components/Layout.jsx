@@ -1,12 +1,14 @@
 import Navbar from "./Navbar";
+import Header from "../components/Header";
 import Head from "next/head";
 import Footer from "./Footer";
 import styles from "../styles/Layout.module.css";
 
-const Layout = ({ children, title, description, home }) => {
+const Layout = ({ children, title, description, header = true }) => {
   return (
     <div>
       <Navbar />
+      {header && <Header />}
       <div className={styles.container}>
         <Head>
           <title>{title}</title>
@@ -14,8 +16,8 @@ const Layout = ({ children, title, description, home }) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>{children}</main>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

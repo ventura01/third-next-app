@@ -7,6 +7,7 @@ const Registro = () => {
     <Layout
       title="Picky Store | Registro"
       description="Pagina de registro de usuario, descripcion de la empresa e historia."
+      header={false}
     >
       <h1>Pagina de registro</h1>
       <Formulario />

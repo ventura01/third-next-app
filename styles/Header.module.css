@@ -1,3 +1,10 @@
+.container{
+    min-width: 36rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+}
 .titulo{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -9,4 +16,15 @@
 .texto{
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
+}
+.bg_header{
+    /* width: 100vw; */
+    /* height: 40vh; */
+    margin-top: 57px;
+    background-color: #f1f1f1;
+    /* border-bottom: 1px solid #c6c6c6; */
+    /* border-top: 1px solid #c6c6c6; */
+}
+.textos_header_cont{
+    padding: 1rem 0 0 0;
 }

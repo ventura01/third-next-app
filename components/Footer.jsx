@@ -20,9 +20,26 @@ const month = new Date().getMonth();
 const Footer = () => {
   return (
     <div>
-      <p>
-        Todos los derechos reservados ©{months[month]} / {year}
-      </p>
+      <footer className="bg-light text-center">
+        <div className="p-3">
+          <h3>Picky Store</h3>
+          <p>Todos los derechos reservados</p>
+          <p>
+            &copy;{months[month]}/{year}
+          </p>
+          <div className="footer_rrss_cont d-flex justify-content-center">
+            <div className="social_media_meta mx-1">
+              <i className="bi bi-meta"></i>
+            </div>
+            <div className="social_media_inst mx-1">
+              <i className="bi bi-instagram"></i>
+            </div>
+            <div className="social_media_twitter mx-1">
+              <i className="bi bi-twitter"></i>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

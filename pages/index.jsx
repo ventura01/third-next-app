@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import Header from "../components/Header";
 import Link from "next/link";
 import Image from "next/image";
 import dbConnect from "../lib/dbConnect";
@@ -8,35 +7,34 @@ import Producto from "../models/Producto";
 export default function Home({ productos }) {
   console.log(productos);
   return (
-    <Layout title="Picky Store | Inicio" description="Pagina de inicio." home>
-      <h1>Inicio</h1>
-      <Header />
-
-      <div className="row">
-        {productos.map(({ _id, title, description, price, ref, imgURL }) => (
-          <div key={_id} className="card d-flex col-md-4">
-            <Image
-              src={imgURL}
-              width={400}
-              height={400}
-              Layout="responsive"
-              alt="img"
-              priority
-              className="card-img-top"
-            />
-            <div className="card-body">
-              <h4 className="card-title text-center">{title}</h4>
-              <p className="card-text">{description}</p>
-              <h3>Precio: US{price}</h3>
-              <p className="card-text text-secondary">Ref: {ref}</p>
+    <div>
+      <Layout title="Picky Store | Inicio" description="Pagina de inicio." home>
+        <div className="row">
+          {productos.map(({ _id, title, description, price, ref, imgURL }) => (
+            <div key={_id} className="card d-flex col-md-4">
+              <Image
+                src={imgURL}
+                width={500}
+                height={400}
+                Layout="responsive"
+                alt="img"
+                priority
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h4 className="card-title text-center">{title}</h4>
+                <p className="card-text">{description}</p>
+                <h3>Precio: US{price}</h3>
+                <p className="card-text text-secondary">Ref: {ref}</p>
+              </div>
+              <Link href={"/"}>
+                <a className="btn btn-outline-primary mb-2">Ver más...</a>
+              </Link>
             </div>
-            <Link href={"/"}>
-              <a className="btn btn-outline-primary mb-2">Ver más...</a>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </Layout>
+          ))}
+        </div>
+      </Layout>
+    </div>
   );
 }
 export async function getServerSideProps() {
