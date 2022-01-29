@@ -8,7 +8,11 @@ export default function Home({ productos }) {
   console.log(productos);
   return (
     <div>
-      <Layout title="Picky Store | Inicio" description="Pagina de inicio." home>
+      <Layout
+        title="Picky Store | Inicio"
+        description="Pagina de inicio."
+        header={true}
+      >
         <div className="row">
           {productos.map(({ _id, title, description, price, ref, imgURL }) => (
             <div key={_id} className="card d-flex col-md-4">
