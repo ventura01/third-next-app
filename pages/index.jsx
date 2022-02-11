@@ -28,8 +28,12 @@ export default function Home({ productos }) {
               <div className="card-body">
                 <h4 className="card-title text-center">{title}</h4>
                 <p className="card-text">{description}</p>
-                <h3>Precio: US{price}</h3>
-                <p className="card-text text-secondary">Ref: {ref}</p>
+                <h3>
+                  <i className="bi bi-tag"></i> {price}
+                </h3>
+                <p className="card-text text-secondary">
+                  <i className="bi bi-upc-scan"></i> {ref}
+                </p>
               </div>
               <Link href={"/"}>
                 <a className="btn btn-outline-primary mb-2">Ver más...</a>
